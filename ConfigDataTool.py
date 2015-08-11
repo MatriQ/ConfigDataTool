@@ -77,7 +77,8 @@ def geneDataConfig(source,output):
 		return content
 	except Exception, e:
 		traceback.print_exc()
-		print("gene data config by %s failed\n please make sure all of xls/xlsx is closed and data format is right\n----------------------" % source)#.decode("utf-8").encode('gbk'))
+		print("\ngene data config by %s[%s] failed\nplease make sure all of xls/xlsx is closed and data format is right\n----------------------" %
+		 (source.decode("utf-8").encode('gbk'),e.message))#)
 	return None
 
 def main():
@@ -92,7 +93,7 @@ def main():
 		configs={
 			"充值配置表.xlsx":"RechargeConfig",
 			"CH_称号_cs.xlsx":"PlayerTitleConfig",
-			"DJ_道具_cs.xlsx":"PropsConfig",
+			"DJ_道具_cs.xls":"PropsConfig",
 			"FB_副本_cs.xlsx":"GameCopy",
 			"GW_怪物_cs_MonsterConfig.xlsx":"MonsterConfig",
 			"JN_技能_cs_SkillsConfig.xls":"SkillsConfig",
